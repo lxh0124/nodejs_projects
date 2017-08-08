@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "QuickStart package.json from the documentation, supplemented with testing support",
   "scripts": {
-    "test2": "mocha test/test.js",
+    "test": "mocha"
   },
   "keywords": [],
   "author": "",
