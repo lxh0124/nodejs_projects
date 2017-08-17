@@ -3,9 +3,6 @@ const hostname = '127.0.0.1';
 const port = 3000;
 
 const EventEmitter = require('events');
-const date = require('./date.js');
-
-date.format(new Date);
 
 
 class MyEmitter extends EventEmitter {}
