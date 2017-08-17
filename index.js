@@ -39,6 +39,7 @@ server.on('connection', (stream) => {
   console.log('someone connected!');
 });
 
+console.log('testing github....');
 
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
