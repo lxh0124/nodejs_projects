@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+
+<body>
+    <canvas id="gameCanvas" width="600" height="300" style="border:1px solid #c3c3c3;"></canvas>
+
+
+</body>
+<script src="util.js"></script>
+<script src="Panel.js"></script>
+<script src="Ball.js"></script>
+<script src="Block.js"></script>
+<script src="Game.js"></script>
+
+<script>
+    
+
+    var canvas = document.getElementById('gameCanvas');
+    var ctx = canvas.getContext("2d");
+  var actions = {}
+    var game = Game();
+
+    setInterval(function () {
+        // if(game.isOver()){
+        //     alert("you are failed");
+        //     return ;
+        // }
+        game.clear();
+        game.update();
+        game.redraw();
+    }, 1000 / game.speed);
+
+    document.addEventListener('keydown', function (event) {
+        
+        //console.log(event)
+        var action = actions[event.code]
+        if (action) {
+            action();
+        }
+    });
+
+</script>
+
+</html>
